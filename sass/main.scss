@@ -1,0 +1,462 @@
+@import 'variables';
+@import 'mixins';
+@import 'global';
+@import 'animation';
+@import 'header';
+@import 'about';
+@import 'skills';
+@import 'projects';
+@import 'contact';
+
+// //HERO
+// #hero {
+//   background: url('/images/background.jpg') no-repeat center center/cover;
+//   height: 100vh;
+//   width: 100%;
+//   position: relative;
+// }
+// #hero::before {
+//   content: '';
+//   background-color: $primary-dark1;
+//   opacity: 0.8;
+//   position: absolute;
+//   height: 100%;
+//   width: 100%;
+//   top: 0;
+//   left: 0;
+// }
+// //Navbar
+// .navbar {
+//   background-color: $primary-dark1;
+//   position: fixed;
+//   width: 100%;
+//   z-index: 2;
+//   opacity: 0.9;
+//   // border: 2px white solid;
+// }
+// .navbar .container {
+//   display: flex;
+//   // flex-direction: row;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+// .navbar * {
+//   z-index: 1;
+// }
+// .navbar h1 {
+//   margin: 0 1rem;
+//   color: $primary-light1;
+//   // border: 2px white solid;
+// }
+// .navbar h1 a {
+//   transition: all 0.4s ease-in-out;
+// }
+// .navbar h1 a:hover {
+//   color: $primary-light2;
+// }
+// .navbar nav ul {
+//   // border: 2px white solid;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+// .navbar nav ul li {
+//   // border: 2px white solid;
+//   padding: 1rem;
+// }
+// .navbar nav ul li a {
+//   // text-transform: uppercase;
+//   font-size: 0.75rem;
+//   transition: all 0.4s ease-in-out;
+// }
+// .navbar nav ul li a:hover {
+//   color: $primary-light2;
+//   cursor: pointer;
+// }
+// //Hero Content
+// #hero .content {
+//   // border: 2px white solid;
+//   height: 100vh;
+//   width: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   text-align: center;
+//   padding: 1rem 1rem 5rem;
+//   font-size: 1.3rem;
+// }
+// #hero .content h1 {
+//   padding-bottom: 1rem;
+//   font-size: 3rem;
+//   // border: 2px white solid;
+// }
+// #hero .chevron {
+//   position: absolute;
+//   // display: block;
+//   // border: 2px white solid;
+//   width: 100%;
+//   height: 30px;
+//   // left: 49.5vw;
+//   bottom: 4rem;
+//   transition: all 0.4s ease-in-out;
+// }
+// #hero .chevron a {
+//   display: block;
+//   text-align: center;
+//   // position: absolute;
+//   // border: 2px white solid;
+//   // left: 49.5vw;
+//   // bottom: 2rem;
+//   transition: all 0.4s ease-in-out;
+// }
+// #hero .chevron a {
+//   color: $primary-light2;
+// }
+// About
+// #about {
+//   background-color: #fff;
+//   color: $blue-dark;
+//   padding: 2rem 0;
+// }
+
+// #about .container {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   justify-content: center;
+
+//   height: 100%;
+// }
+
+// @media (max-width: 768px) {
+//   #about .container {
+//     display: block;
+//     padding-top: 1rem;
+//     // border: 2px white solid;
+//   }
+//   #about .container img {
+//     display: block;
+//     width: 150px !important;
+//     margin: auto;
+//     border-radius: 50%;
+//     // border: 2px white solid;
+//   }
+//   #about .container .about-content {
+//     max-width: 100%;
+//     margin: 0 auto;
+//     padding-top: 1rem !important;
+//     // border: 2px white solid;
+//   }
+//   #about .container .about-content .text-content * {
+//     padding: 0;
+//     text-align: center;
+//     // border: 2px white solid;
+//   }
+//   #about .container .about-content .contacts {
+//     padding: 0.65rem 0;
+//     // padding: 0;
+//     text-align: center;
+//     // border: 2px white solid;
+//   }
+//   #about .container .about-content .resume {
+//     text-align: center;
+//     // border: 2px white solid;
+//   }
+//   // #about .container .about-content .contacts {
+//   //   // border: 2px white solid;
+//   // }
+//   #about .container .about-content .contacts a {
+//     // border: 2px white solid;
+//     text-align: center;
+//     padding: 0 !important;
+//   }
+// }
+
+// #about .container img {
+//   width: 250px;
+//   border-radius: 50%;
+// }
+
+// #about .container .about-content {
+//   // width: 50%;
+//   max-width: 600px;
+//   padding: 3rem;
+//   // border: 2px white solid;
+// }
+
+// #about .container .about-content .text-content * {
+//   padding: 0.5em 0;
+//   // border: 2px white solid;
+// }
+
+// #about .container .about-content .contacts {
+//   padding: 0.65rem 0;
+//   // border: 2px white solid;
+// }
+
+// #about .container .about-content .contacts a {
+//   color: $blue-dark;
+//   font-size: 0.7rem;
+//   padding-right: 10px;
+//   transition: all 0.4s ease-in-out;
+
+//   // border: 2px white solid;
+// }
+
+// #about .container .about-content .contacts a:hover {
+//   color: $primary-dark2;
+// }
+// #about .container .about-content .resume > a {
+//   font-weight: bolder;
+// }
+// #about .container .about-content .resume > a:hover {
+//   background-color: $primary-dark2;
+// }
+
+// Skills
+
+// #skills {
+//   // background-color: $blue-light3;
+//   background-color: $blue-light3;
+//   text-align: center;
+//   padding: 3rem 2rem 3rem;
+//   // border: 2px black solid;
+// }
+
+// #skills > .container {
+//   // border: 2px black solid;
+//   max-width: 800px;
+// }
+
+// #skills .grid-skills {
+//   margin-top: 3rem;
+
+//   display: grid;
+
+//   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+//   // grid-template-rows: 100px;
+//   grid-gap: 50px 0px;
+//   justify-content: stretch;
+
+//   color: #596675;
+// }
+
+// @media (max-width: 480px) {
+//   #skills .grid-skills {
+//     grid-template-columns: repeat(3, 1fr);
+//     justify-content: stretch !important;
+//     text-align: center;
+//     font-size: 0.75rem;
+//   }
+// }
+
+// #skills .grid-skills .grid-item {
+//   // border: 2px black solid;
+//   transition: all 0.4s ease-in-out;
+//   i.devicon {
+//     font-size: 2.9rem;
+//   }
+// }
+
+// #skills .grid-skills .grid-item:hover {
+//   color: $primary-light2;
+// }
+
+// #projects {
+//   text-align: center;
+//   padding: 4rem 1rem;
+//   // background-color: $primary-light1;
+//   background-color: $blue-light1;
+//   color: $primary-dark1;
+// }
+// #projects .grid-projects {
+//   // border: 2px black solid;
+//   width: 100%;
+//   // margin-top: 2rem;
+//   display: grid;
+//   padding: 1rem 1rem;
+//   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+//   // grid-template-rows: 100px;
+//   grid-gap: 50px;
+//   justify-content: center;
+//   align-content: center;
+//   font-size: 0.85rem;
+// }
+
+// #projects h2 {
+//   // border: 2px black solid;
+//   margin-bottom: 2rem;
+// }
+
+// #projects img {
+//   width: 300px;
+//   border-radius: 10px;
+//   transition: all 0.4s ease-in-out;
+//   // border: 2px black solid;
+//   // padding: 2rem 1.2rem 0.7rem;
+// }
+// #projects img:hover {
+//   opacity: 0.8;
+// }
+// #projects h4 {
+//   font-size: 0.75rem;
+//   font-weight: bolder;
+//   padding-bottom: 1rem;
+// }
+
+// #projects .grid-projects .grid-item p {
+//   padding-bottom: 1rem;
+// }
+// #projects .grid-projects a {
+//   font-weight: bolder;
+//   color: $primary-light1;
+//   transition: all 0.4s ease-in-out;
+// }
+
+// #projects .grid-projects a:hover {
+//   background-color: $primary-dark2;
+// }
+//Contacts
+// #contact {
+// height: 40vh;
+// background-color: $primary-dark1;
+//   background-color: $blue-dark;
+// }
+
+// #contact .container {
+//   height: 100%;
+//   max-width: 900px;
+//   // border: 2px white solid;
+// }
+
+// #contact .grid-contact {
+//   display: grid;
+//   grid-template-columns: 1.4fr 1fr;
+//   justify-content: center;
+//   text-align: center;
+//   // border: 2px white solid;
+//   // padding: 1.5rem;
+// }
+// @media (max-width: 480px) {
+//   #contact .grid-contact {
+//     display: block;
+//     // border: 2px black solid;
+//     padding: 1rem;
+//   }
+
+//   #contact .grid-contact:first-child .msg {
+//     display: block;
+//     margin-top: 1rem;
+//     padding: 1rem;
+//     // border: 2px black solid;
+//   }
+//   #contact .grid-contact:last-child .form {
+//     display: block;
+//     padding: 0rem !important;
+
+//     // border: 1px #ddd solid;
+//   }
+// }
+
+// #contact .grid-contact:first-child .msg {
+//   display: flex;
+//   padding: 0.8rem 1.5rem 1.5rem;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   // border: 2px black solid;
+// }
+
+// #contact .grid-contact:first-child h3 {
+//   font-size: 2rem;
+//   padding-bottom: 1rem;
+// }
+// #contact .grid-contact:first-child .contacts {
+//   font-size: 0.8rem;
+//   padding-top: 3rem;
+//   // border: 2px black solid;
+// }
+
+// #contact .grid-contact:first-child .contacts a {
+//   // border: 2px white solid;
+//   padding: 0 10px;
+//   transition: all 0.4s ease-in-out;
+// }
+
+// #contact .grid-contact:first-child .contacts a:hover {
+//   color: $primary-light2;
+// }
+
+// /* Contact Form */
+// #contact .grid-contact:last-child .form {
+//   display: flex;
+//   padding: 3rem 2.5rem 1rem 0;
+//   flex-direction: column;
+//   // align-items: center;
+//   // align-content: center;
+//   justify-content: center;
+//   width: 100%;
+//   height: 100%;
+//   // border: 1px #ddd solid;
+// }
+
+// #contact .grid-contact:last-child .form-group {
+//   color: $primary-dark1;
+//   margin-bottom: 20px;
+//   width: 100%;
+
+//   // border: 2px white solid;
+// }
+
+// // #contact .grid-contact:last-child label {
+// //   color: $primary-light2;
+// //   display: block;
+// //   font-size: 0.75rem;
+// //   // width: 50%;
+// //   margin-bottom: 5px;
+// // }
+
+// #contact .grid-contact:last-child input,
+// #contact .grid-contact:last-child textarea {
+//   background-color: #fff;
+//   // width: 50%;
+//   width: 100%;
+//   padding: 5px;
+//   border: none;
+//   border-radius: 3px;
+//   // border: 1px #ddd solid;
+// }
+
+// #contact .grid-contact:last-child textarea {
+//   height: 100px;
+// }
+
+// #contact .grid-contact:last-child input:focus,
+// #contact .grid-contact:last-child textarea:focus {
+//   outline: none;
+//   border-color: $primary-dark2;
+// }
+
+// #contact .grid-contact:last-child .form .btn {
+//   background-color: $primary-light1;
+
+//   border: none;
+// }
+// #contact .grid-contact:last-child .form .btn:hover {
+//   background-color: $primary-light2;
+//   cursor: pointer;
+// }
+
+// Footer
+// footer {
+//   background-color: $blue-dark;
+//   text-align: center;
+//   font-size: 0.8rem;
+//   font-weight: bolder;
+//   padding: 1rem;
+// }

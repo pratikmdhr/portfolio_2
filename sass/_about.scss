@@ -1,0 +1,51 @@
+#about {
+  background-color: $blue-light3;
+}
+
+.about {
+  text-align: center;
+
+  .content {
+    @include breakpoint-up(test) {
+      display: flex;
+      align-items: center;
+      column-gap: 4rem;
+
+      .text-container {
+        text-align: left;
+      }
+
+      .image-container {
+        max-width: 20rem;
+        height: 20rem;
+      }
+    }
+  }
+
+  .image-container {
+    background-image: url('../images/pic.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 16rem;
+    height: 16rem;
+  }
+
+  .text-container {
+    text-align: center;
+    line-height: 1.75;
+    color: $b2;
+
+    .contacts {
+      margin: 2rem auto 1rem;
+    }
+
+    .resume {
+      a {
+        color: black;
+      }
+    }
+  }
+}

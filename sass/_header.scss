@@ -1,0 +1,128 @@
+.header {
+  background: url(../images/background-1.jpg) center center/cover;
+  position: relative;
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: $primary-dark1-transparent;
+  }
+
+  .nav {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translate(-50%);
+    transition: all 300ms ease-in-out;
+
+    &.sticky {
+      position: fixed;
+      background-color: $blue-dark-t;
+      z-index: 11;
+    }
+  }
+
+  &__logo {
+    font-size: 2rem;
+  }
+
+  &__toggle {
+    z-index: 10;
+    // Mobile menu
+    // Hamburger
+    > span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background-color: #fff;
+      transition: all 300ms ease-in-out;
+      transform-origin: 2px 1px;
+
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  &__links {
+    a {
+      position: relative;
+      cursor: pointer;
+
+      &:not(:last-child) {
+        margin-right: 32px;
+      }
+      &:after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 0;
+        left: 0;
+        bottom: -1rem;
+        transition: 200ms;
+      }
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+  &__menu {
+    z-index: 10;
+    position: absolute;
+    width: calc(100% - 3rem);
+    left: 50%;
+    top: 5rem;
+    transform: translate(-50%);
+    background: #fff;
+    margin-top: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 5px;
+
+    a {
+      display: block;
+      padding: 0.625rem;
+      color: $b2;
+      text-align: center;
+      font-weight: bolder;
+      cursor: pointer;
+      &:not(:last-child) {
+        border-bottom: 0.5px $b7 dotted;
+      }
+    }
+  }
+
+  .hero {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    line-height: 1.75;
+
+    p {
+      font-size: 1.5rem;
+      @include breakpoint-down(small) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .chevron {
+    position: absolute;
+    bottom: 6rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    i {
+      cursor: pointer;
+      transition: all 300ms ease-in-out;
+      &:hover {
+        font-size: 3rem;
+      }
+    }
+  }
+}

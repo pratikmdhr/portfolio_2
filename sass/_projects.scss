@@ -1,0 +1,35 @@
+#projects {
+  background-color: $blue-light3;
+}
+.projects {
+  color: black;
+  text-align: center;
+
+  .grid-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+    grid-gap: 3rem;
+
+    .grid-item {
+      img {
+        max-width: 20rem;
+        width: 100%;
+        border-radius: 10px;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+      h4 {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+      }
+
+      p {
+        padding-bottom: 0.75rem;
+        color: $b2;
+      }
+    }
+  }
+}
