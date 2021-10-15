@@ -22,8 +22,8 @@
     <title>Pratik</title>
   </head>
 
-  <body id="home">
-    <header class="header" data-section="home" class="section">
+  <body>
+    <header id="home" class="header section">
       <div class="overlay has-fade"></div>
       <nav class="nav fader">
         <div
@@ -45,11 +45,11 @@
             <span></span>
           </a>
           <div class="nav-links header__links hide-for-mobile">
-            <a data-id="home">Home</a>
-            <a data-id="about">About</a>
-            <a data-id="skills">Skills</a>
-            <a data-id="projects">Projects</a>
-            <a data-id="contact">Contact</a>
+            <a data-id="home" class="desktop__menu">Home</a>
+            <a data-id="about" class="desktop__menu">About</a>
+            <a data-id="skills" class="desktop__menu">Skills</a>
+            <a data-id="projects" class="desktop__menu">Projects</a>
+            <a data-id="contact" class="desktop__menu">Contact</a>
           </div>
         </div>
       </nav>
@@ -75,7 +75,7 @@
     </header>
 
     <main>
-      <section id="about">
+      <section id="about" class="section">
         <div class="about container container--pda">
           <h2>About Me</h2>
           <div class="content">
@@ -122,7 +122,7 @@
         </div>
       </section>
 
-      <section id="skills" class="section">
+      <section id="skills" class="section section-fade">
         <div class="skills container container--pda">
           <h2>Skills</h2>
           <div class="grid-skills">
@@ -182,7 +182,7 @@
         </div>
       </section>
 
-      <section id="projects" class="section">
+      <section id="projects" class="section section-fade">
         <div class="projects container container--pda">
           <h2>Projects</h2>
           <div class="grid-projects">
@@ -224,7 +224,7 @@
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" class="section">
         <div class="grid-contact container container--pda">
           <div class="grid-item msg">
             <h3>Let's Work Together!</h3>

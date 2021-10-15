@@ -166,6 +166,15 @@ i.dark {
       transition: 200ms; }
     .header__links a:hover:after {
       width: 100%; }
+    .header__links a.active {
+      position: relative; }
+      .header__links a.active:after {
+        content: '';
+        position: absolute;
+        background-color: #fff;
+        height: 3px;
+        width: 100%;
+        bottom: -1rem; }
   .header__menu {
     z-index: 10;
     position: absolute;
