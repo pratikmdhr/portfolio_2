@@ -97,7 +97,7 @@ i.dark {
     align-items: flex-start; }
 
 .animate {
-  animation: slideInFromBottom 1s ease-in-out; }
+  animation: slideInFromBottom 1s ease; }
 
 @media (max-width: 63.9375em) {
   .hide-for-mobile {
@@ -112,9 +112,11 @@ i.dark {
 
 @keyframes slideInFromBottom {
   0% {
-    transform: translateY(100%); }
+    transform: translateY(8rem);
+    opacity: 0; }
   100% {
-    transform: translateX(0); } }
+    transform: translateX(0);
+    opacity: 1; } }
 
 .header {
   background: url(../images/background-1.jpg) center center/cover;
