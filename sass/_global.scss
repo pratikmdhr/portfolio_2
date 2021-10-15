@@ -132,7 +132,22 @@ i {
   }
 }
 
-// Visibility
+// Revealing elements on Scroll
+
+// .section {
+//   transition: all 0.75s ease-in-out;
+// }
+
+// .section-hidden {
+//   opacity: 0;
+//   transform: translateY(5rem);
+// }
+
+.animate {
+  animation: slideInFromBottom 1s ease-in-out;
+}
+
+// Visibility for responsive navbar
 
 .hide-for-mobile {
   @include breakpoint-down(medium) {

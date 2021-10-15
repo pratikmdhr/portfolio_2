@@ -1,3 +1,13 @@
 .has-fade {
   visibility: hidden;
 }
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}

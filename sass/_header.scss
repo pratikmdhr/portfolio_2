@@ -14,10 +14,8 @@
   .nav {
     position: absolute;
     width: 100%;
-    left: 50%;
-    transform: translate(-50%);
-    transition: all 400ms ease-in-out;
-
+    transition: all 0.4s ease;
+    -webkit-transition: 0.4s all ease;
     &.sticky {
       position: fixed;
       background-color: $blue-dark-t;
@@ -101,6 +99,7 @@
     height: 100vh;
     text-align: center;
     line-height: 1.75;
+    padding-bottom: 11rem;
 
     p {
       font-size: 1.5rem;

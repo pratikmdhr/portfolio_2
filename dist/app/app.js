@@ -22,6 +22,9 @@ const skillsSection = document.querySelector('#skills');
 const projectsSection = document.querySelector('#projects');
 const contactSection = document.querySelector('#contact');
 
+// To reveal section on scrolling
+const allSections = document.querySelectorAll('.section');
+
 // for mobile menu
 const toggler = function () {
   fadeElements.forEach((el) => {
@@ -66,7 +69,25 @@ const stickyNav = function (entries) {
 };
 const headerObserver = new IntersectionObserver(stickyNav, {
   root: null,
-  threshold: 0.5,
+  threshold: 0.45,
 });
 
 headerObserver.observe(header);
+
+// Revealing Section elements on Scroll
+
+const revealSection = function (entries, observer) {
+  [entry] = entries;
+  if (!entry.isIntersecting) return;
+  entry.target.classList.add('animate');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0,
+});
+
+allSections.forEach((section) => {
+  sectionObserver.observe(section);
+});

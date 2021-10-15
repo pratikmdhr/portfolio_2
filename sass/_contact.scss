@@ -6,6 +6,7 @@
   @include breakpoint-up(test) {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
   }
 
   padding-bottom: 2rem;
