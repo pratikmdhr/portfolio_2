@@ -24,12 +24,29 @@ let observe = true;
 
 // mobile menu
 const toggler = function () {
-  fadeElements.forEach((el) => {
-    el.classList.toggle('has-fade');
-  });
+  navBar.classList.toggle('no-bg');
+  body.classList.toggle('no-scroll');
+  hamburger.classList.toggle('open');
+
+  if (hamburger.classList.contains('open')) {
+    fadeElements.forEach(function (el) {
+      el.classList.remove('fade-out');
+      el.classList.add('fade-in');
+      el.classList.remove('has-fade');
+    });
+  } else {
+    fadeElements.forEach(function (el) {
+      el.classList.remove('fade-in');
+      el.classList.add('fade-out');
+      el.classList.add('has-fade');
+    });
+  }
 };
 
-hamburger.addEventListener('click', toggler);
+hamburger.addEventListener('click', (e) => {
+  e.preventDefault();
+  toggler();
+});
 overlay.addEventListener('click', toggler);
 mobileLinks.forEach((link) => {
   link.addEventListener('click', toggler);

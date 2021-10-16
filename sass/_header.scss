@@ -1,17 +1,17 @@
 .header {
   background: url(../images/background-1.jpg) center center/cover;
   position: relative;
-
   .overlay {
+    z-index: 10;
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: $primary-dark1-transparent;
+    background-color: $blue-dark-t2;
   }
-
   .nav {
+    z-index: 11;
     position: absolute;
     width: 100%;
     transition: all 0.4s ease;
@@ -19,7 +19,9 @@
     &.sticky {
       position: fixed;
       background-color: $blue-dark-t;
-      z-index: 11;
+      &.no-bg {
+        background: none;
+      }
     }
   }
 
@@ -28,19 +30,55 @@
   }
 
   &__toggle {
-    z-index: 10;
-    // Mobile menu
-    // Hamburger
-    > span {
-      display: block;
-      width: 26px;
-      height: 3px;
-      background-color: #fff;
-      transition: all 300ms ease-in-out;
-      transform-origin: 2px 1px;
+    position: relative;
+    // display: block;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
 
-      &:not(:last-child) {
-        margin-bottom: 5px;
+    span {
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 4px;
+      background-color: #fff;
+      border-radius: 2px;
+      opacity: 1;
+      left: 0;
+      transition: all 300ms ease-in-out;
+
+      &:nth-child(1) {
+        top: 0;
+      }
+      &:nth-child(2) {
+        top: 10px;
+      }
+      &:nth-child(3) {
+        top: 10px;
+      }
+      &:nth-child(4) {
+        top: 20px;
+      }
+    }
+
+    &.open span {
+      &:nth-child(1),
+      &:nth-child(4) {
+        top: 10px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:nth-child(3) {
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        -o-transform: rotate(-45deg);
+        transform: rotate(-45deg);
       }
     }
   }
@@ -83,26 +121,27 @@
 
   &__menu {
     z-index: 10;
-    position: absolute;
+    position: fixed;
     width: calc(100% - 3rem);
     left: 50%;
     top: 5rem;
     transform: translate(-50%);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.767);
     margin-top: 1.5rem;
     padding: 1.25rem;
-    border-radius: 5px;
+    border-radius: 15px;
 
     a {
+      font-size: 1.25rem;
       display: block;
       padding: 0.625rem;
-      color: $b2;
+      color: $b1-t;
       text-align: center;
       font-weight: bolder;
       cursor: pointer;
-      &:not(:last-child) {
-        border-bottom: 0.5px $b7 dotted;
-      }
+      // &:not(:last-child) {
+      //   border-bottom: 0.5px $b7 dotted;
+      // }
     }
   }
 
