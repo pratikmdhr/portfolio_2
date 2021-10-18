@@ -10,6 +10,7 @@
     left: 0;
     background-color: $blue-dark-t3;
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
   }
   .nav {
     z-index: 11;
@@ -22,6 +23,7 @@
       background-color: $blue-dark-t;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
       backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       &.no-bg {
         background: none;
         backdrop-filter: none;

@@ -153,7 +153,8 @@ i.dark {
     bottom: 0;
     left: 0;
     background-color: #2c759491;
-    backdrop-filter: blur(6px); }
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); }
   .header .nav {
     z-index: 11;
     position: absolute;
@@ -164,7 +165,8 @@ i.dark {
       position: fixed;
       background-color: #2c7594b6;
       box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-      backdrop-filter: blur(6px); }
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px); }
       .header .nav.sticky.no-bg {
         background: none;
         backdrop-filter: none;
