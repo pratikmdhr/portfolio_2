@@ -60,7 +60,7 @@ i.dark {
 .btn {
   border-radius: 1rem;
   border: 1px #428faa solid;
-  padding: 0.3rem 1rem;
+  padding: 0.4rem 1.14rem;
   transition: all 0.15s ease-in-out;
   color: #428faa !important;
   font-size: 0.9rem;
@@ -152,7 +152,8 @@ i.dark {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: #2c7594ea; }
+    background-color: #2c759491;
+    backdrop-filter: blur(6px); }
   .header .nav {
     z-index: 11;
     position: absolute;
@@ -161,9 +162,13 @@ i.dark {
     -webkit-transition: 0.4s all ease; }
     .header .nav.sticky {
       position: fixed;
-      background-color: #2c7594b6; }
+      background-color: #2c7594b6;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(6px); }
       .header .nav.sticky.no-bg {
-        background: none; }
+        background: none;
+        backdrop-filter: none;
+        box-shadow: none; }
   .header__logo {
     font-size: 2rem; }
   .header__toggle {
@@ -300,6 +305,10 @@ i.dark {
     color: #2f6690; }
     .about .text-container .contacts {
       margin: 2rem auto 1rem; }
+      .about .text-container .contacts i {
+        transition: all 0.15s ease-in-out; }
+        .about .text-container .contacts i:hover {
+          transform: translateY(-0.15rem); }
     .about .text-container .resume a {
       color: black; }
 
@@ -348,6 +357,8 @@ i.dark {
     .projects .grid-projects .grid-item p {
       padding-bottom: 0.75rem;
       color: #2f6690; }
+    .projects .grid-projects .grid-item a {
+      margin: 0 0.5rem; }
 
 #contact {
   background-color: #2c7494; }
@@ -362,6 +373,10 @@ i.dark {
       column-gap: 3rem; } }
   .grid-contact .msg .contacts {
     padding-bottom: 1.5rem; }
+    .grid-contact .msg .contacts i {
+      transition: all 0.15s ease-in-out; }
+      .grid-contact .msg .contacts i:hover {
+        transform: translateY(-0.15rem); }
   .grid-contact .msg p {
     padding: 1.5rem 0; }
   .grid-contact .form .form-group > * {
@@ -376,6 +391,10 @@ i.dark {
       outline-color: #2c7494; }
   .grid-contact .form .form-group textarea {
     height: 6.25rem; }
+  .grid-contact .form .btn {
+    background-color: #fff; }
+    .grid-contact .form .btn:hover {
+      background-color: rgba(255, 255, 255, 0.404); }
 
 footer {
   background-color: #2c7494;

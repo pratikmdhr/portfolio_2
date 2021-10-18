@@ -40,6 +40,12 @@
 
     .contacts {
       margin: 2rem auto 1rem;
+      i {
+        transition: all 0.15s ease-in-out;
+        &:hover {
+          transform: translateY(-0.15rem);
+        }
+      }
     }
 
     .resume {
